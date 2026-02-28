@@ -29,7 +29,6 @@ if uploaded_file is not None:
   st.subheader("Gene Expression Data")
   st.write(df)
   st.dataframe(df)
-
 if "Gene" in df.columns and "Expression" in df.columns:
     st.write("Gene Expression Plot")
     fig.ax = plt.subplots()
@@ -38,7 +37,7 @@ if "Gene" in df.columns and "Expression" in df.columns:
     ax.set_ylabel("Expression Level")
     ax.set_title("Gene Expression Levels")
     st.pyplot(fig)
-  else:
+else:
     st.warning("Gene and Expression columns not found in the uploaded file.")
 
     st.write("---")
