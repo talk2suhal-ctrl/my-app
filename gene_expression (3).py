@@ -25,19 +25,11 @@ uploaded_file = st.file_uploader("Upload Gene Expression CSV", type=["csv"])
 
 if uploaded_file is not None:
   df = pd.read_csv(uploaded_file)
-  st.subheader("Gene Expression Data")
-  st.write(df)
-  st.dataframe(df)
+ 
 if "Gene" in df.columns and "Expression" in df.columns:
-    st.write("Gene Expression Plot")
-    fig.ax = plt.subplots()
-    ax.bar(df["Gene"], df["Expression"])
-    ax.set_xlabel("Gene")
-    ax.set_ylabel("Expression Level")
-    ax.set_title("Gene Expression Levels")
-    st.pyplot(fig)
+    st.write("Valid columns found")
 else:
-    st.warning("Gene and Expression columns not found in the uploaded file.")
+    st.error("Gene and Expression columns not found in the uploaded file.")
 
     st.write("---")
     st.write("### Analyse FASTA Sequence")
