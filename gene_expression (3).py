@@ -25,10 +25,9 @@ uploaded_file = st.file_uploader("Upload Gene Expression CSV", type=["csv"])
 
 if uploaded_file is not None:
   df.columns = pd.read_csv(uploaded_file)
- 
-if "Gene" in df.columns and "Expression" in df.columns:
+  if "Gene" in df.columns and "Expression" in df.columns:
     st.write("Valid columns found")
-else:
+  else:
     st.error("Gene and Expression columns not found in the uploaded file.")
 
     st.write("---")
