@@ -11,7 +11,6 @@ Original file is located at
 
 
 
-from IPython.utils.text import py3compat
 import streamlit as st
 import pandas as pd
 from io import StringIO
