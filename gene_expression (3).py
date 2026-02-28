@@ -24,7 +24,7 @@ st.markdown("Upload a gene expression CSV file or paste a FASTA sequence")
 uploaded_file = st.file_uploader("Upload Gene Expression CSV", type=["csv"])
 
 if uploaded_file is not None:
-  df.columns = pd.read_csv(uploaded_file)
+  df = pd.read_csv(uploaded_file)
   if "Gene" in df.columns and "Expression" in df.columns:
     st.write("Valid columns found")
   else:
