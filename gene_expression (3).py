@@ -30,7 +30,7 @@ if uploaded_file is not None:
   st.write(df)
   st.dataframe(df)
 
- if "Gene" in df.columns and "Expression" in df.columns:
+if "Gene" in df.columns and "Expression" in df.columns:
     st.write("Gene Expression Plot")
     fig.ax = plt.subplots()
     ax.bar(df["Gene"], df["Expression"])
