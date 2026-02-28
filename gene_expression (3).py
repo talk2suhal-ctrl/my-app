@@ -33,7 +33,8 @@ if uploaded_file is not None:
     st.write("---")
     st.write("### Analyse FASTA Sequence")
 
-if fasta_input = st.text_area("Enter a FASTA sequence", height=200)
+fasta_input = st.text_area("Enter a FASTA sequence", height==200)
+if fasta_input:
   fasta_io = StringIO(fasta_input)
   sequences = list(SeqIO.parse(fasta_io, "fasta"))
   for record in SeqIO.parse(fasta_io, "fasta"):
